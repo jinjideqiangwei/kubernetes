@@ -27,7 +27,7 @@ func (c *EC2Metadata) Region() (string, error) {
 		return "", err
 	}
 
-	// returns region without the suffix. Eg: us-west-2a becomes us-west-2
+	// returns region without the suffix. E.g.: us-west-2a becomes us-west-2
 	return resp[:len(resp)-1], nil
 }
 

@@ -9,7 +9,7 @@ import (
 
 // ContainerAttach attaches a connection to a container in the server.
 // It returns a types.HijackedConnection with the hijacked connection
-// and the a reader to get output. It's up to the called to close
+// and the reader to get output. It's up to the called to close
 // the hijacked connection by calling types.HijackedResponse.Close.
 func (cli *Client) ContainerAttach(ctx context.Context, container string, options types.ContainerAttachOptions) (types.HijackedResponse, error) {
 	query := url.Values{}

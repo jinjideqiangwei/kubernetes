@@ -57,7 +57,7 @@ We propose that:
     for their parsing, document them and refuse any selector that references
     unknown labels.
 
-3.  An api object will be incubated in storage.k8s.io/v1beta1 to hold the a `StorageClass`
+3.  An api object will be incubated in storage.k8s.io/v1beta1 to hold the `StorageClass`
     API resource. Each StorageClass object contains parameters required by the provisioner to provision volumes of that class.  These parameters are opaque to the user.
 
 4.  `PersistentVolume.Spec.Class` attribute is added to volumes. This attribute

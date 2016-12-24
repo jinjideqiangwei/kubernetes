@@ -118,7 +118,7 @@ with the shell feature, we chose a different syntax similar to the one in
 Makefiles, `$(var)`. We also chose not to support the bar `$var` format, since
 it is not required to implement the required use-cases.
 
-Nested references, ie, variable expansion within variable names, are not
+Nested references, i.e., variable expansion within variable names, are not
 supported.
 
 #### How should unmatched references be treated?

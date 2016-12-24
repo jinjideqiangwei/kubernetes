@@ -1,6 +1,6 @@
 # Sharing Clusters
 
-This example demonstrates how to access one kubernetes cluster from another. It only works if both clusters are running on the same network, on a cloud provider that provides a private ip range per network (eg: GCE, GKE, AWS).
+This example demonstrates how to access one kubernetes cluster from another. It only works if both clusters are running on the same network, on a cloud provider that provides a private ip range per network (e.g.: GCE, GKE, AWS).
 
 ## Setup
 
@@ -70,7 +70,7 @@ kubernetes-node-wul8     kubernetes.io/hostname=kubernetes-node-wul8            
 
 ## Testing reachability
 
-For this test to work we'll need to create a service in europe:
+For this test to work we'll need to create a service in Europe:
 
 ```
 $ kubectl config use-context <clustername_eu>

@@ -71,7 +71,7 @@ func (c *clientConn) recv() error {
 	}
 }
 
-// result captures the result of receiving the a packet from the server
+// result captures the result of receiving a packet from the server
 type result struct {
 	typ  byte
 	data []byte

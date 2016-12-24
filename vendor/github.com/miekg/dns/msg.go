@@ -73,7 +73,7 @@ func id() uint16 {
 	return uint16(id32)
 }
 
-// MsgHdr is a a manually-unpacked version of (id, bits).
+// MsgHdr is a manually-unpacked version of (id, bits).
 type MsgHdr struct {
 	Id                 uint16
 	Response           bool

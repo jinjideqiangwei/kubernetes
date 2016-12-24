@@ -174,13 +174,13 @@ func (reaper *ReplicationControllerReaper) Stop(namespace, name string, timeout 
 	// [(k1: v1), (k2: v2)] and two rcs: rc1 with selector [(k1=v1)], and rc2 with selector [(k1=v1),(k2=v2)],
 	// the rc manager will sync the older of the two rcs.
 	//
-	// If there are rcs with a superset of labels, eg:
+	// If there are rcs with a superset of labels, e.g.:
 	// deleting: (k1=v1), superset: (k2=v2, k1=v1)
 	//	- It isn't safe to delete the rc because there could be a pod with labels
 	//	  (k1=v1) that isn't managed by the superset rc. We can't scale it down
 	//	  either, because there could be a pod (k2=v2, k1=v1) that it deletes
 	//	  causing a fight with the superset rc.
-	// If there are rcs with a subset of labels, eg:
+	// If there are rcs with a subset of labels, e.g.:
 	// deleting: (k2=v2, k1=v1), subset: (k1=v1), superset: (k2=v2, k1=v1, k3=v3)
 	//  - Even if it's safe to delete this rc without a scale down because all it's pods
 	//	  are being controlled by the subset rc the code returns an error.
@@ -244,14 +244,14 @@ func (reaper *ReplicaSetReaper) Stop(namespace, name string, timeout time.Durati
 	// selector [(k1=v1)], and rs2 with selector [(k1=v1),(k2=v2)], the
 	// ReplicaSet controller will sync the older of the two ReplicaSets.
 	//
-	// If there are ReplicaSets with a superset of labels, eg:
+	// If there are ReplicaSets with a superset of labels, e.g.:
 	// deleting: (k1=v1), superset: (k2=v2, k1=v1)
 	//	- It isn't safe to delete the ReplicaSet because there could be a pod
 	//    with labels (k1=v1) that isn't managed by the superset ReplicaSet.
 	//    We can't scale it down either, because there could be a pod
 	//    (k2=v2, k1=v1) that it deletes causing a fight with the superset
 	//    ReplicaSet.
-	// If there are ReplicaSets with a subset of labels, eg:
+	// If there are ReplicaSets with a subset of labels, e.g.:
 	// deleting: (k2=v2, k1=v1), subset: (k1=v1), superset: (k2=v2, k1=v1, k3=v3)
 	//  - Even if it's safe to delete this ReplicaSet without a scale down because
 	//    all it's pods are being controlled by the subset ReplicaSet the code

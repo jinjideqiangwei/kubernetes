@@ -1620,7 +1620,7 @@ func (gce *GCECloud) UpdateFirewall(name, desc string, sourceRanges netsets.IPNe
 
 // ReserveGlobalStaticIP creates a global static IP.
 // Caller is allocated a random IP if they do not specify an ipAddress. If an
-// ipAddress is specified, it must belong to the current project, eg: an
+// ipAddress is specified, it must belong to the current project, e.g.: an
 // ephemeral IP associated with a global forwarding rule.
 func (gce *GCECloud) ReserveGlobalStaticIP(name, ipAddress string) (address *compute.Address, err error) {
 	op, err := gce.service.GlobalAddresses.Insert(gce.projectID, &compute.Address{Name: name, Address: ipAddress}).Do()

@@ -37,11 +37,11 @@ type MetricConfig struct {
 	// enum type for the metric type
 	MetricType v1.MetricType `json:"metric_type"`
 
-	// metric units to display on UI and in storage (eg: MB, cores)
+	// metric units to display on UI and in storage (e.g.: MB, cores)
 	// this is only used for display.
 	Units string `json:"units"`
 
-	// data type of the metric (eg: int, float)
+	// data type of the metric (e.g.: int, float)
 	DataType v1.DataType `json:"data_type"`
 
 	// the frequency at which the metric should be collected

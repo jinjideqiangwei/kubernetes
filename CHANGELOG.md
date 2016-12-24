@@ -1650,17 +1650,17 @@ binary | sha256 hash
 ## Major Themes
 
 - **Simplified User Experience**
-  - Easier to get a cluster up and running (eg: `kubeadm`, intra-cluster bootstrapping)
-  - Easier to understand a cluster (eg: API audit logs, server-based API defaults)
+  - Easier to get a cluster up and running (e.g.: `kubeadm`, intra-cluster bootstrapping)
+  - Easier to understand a cluster (e.g.: API audit logs, server-based API defaults)
 - **Stateful Appplication Support**
-  - Enhanced persistence capabilities (eg: `StorageClasses`, new volume plugins)
-  - New resources and scheduler features (eg: `ScheduledJob` resource, pod/node affinity/anti-affinity)
+  - Enhanced persistence capabilities (e.g.: `StorageClasses`, new volume plugins)
+  - New resources and scheduler features (e.g.: `ScheduledJob` resource, pod/node affinity/anti-affinity)
 - **Cluster Federation**
   - Global Multi-cluster HTTP(S) Ingress across GCE and GKE clusters.
   - Expanded support for federated hybrid-cloud resources including ReplicaSets, Secrets, Namespaces and Events.
 - **Security**
-  - Increased pod-level security granularity (eg: Container Image Policies, AppArmor and `sysctl` support)
-  - Increased cluster-level security granularity (eg: Access Review API)
+  - Increased pod-level security granularity (e.g.: Container Image Policies, AppArmor and `sysctl` support)
+  - Increased cluster-level security granularity (e.g.: Access Review API)
 
 ## Features
 
@@ -1769,7 +1769,7 @@ If you use an old version kubectl to delete a replication controller or replicas
 - If you upgrade your apiserver to 1.4.x but leave your kubelets at 1.3.x, they will not report init container status, but init containers will work properly.  Upgrading kubelets to 1.4.x fixes this.
 - The NamespaceExists and NamespaceAutoProvision admission controllers have been removed, use the NamespaceLifecycle admission controller instead (#31250, @derekwaynecarr)
 - If upgrading Cluster Federation components from 1.3.x, the `federation-apiserver` and `federation-controller-manager` binaries have been folded into `hyperkube`.  Please switch to using that instead.  (#29929, @madhusudancs)
-- If you are using the PodSecurityPolicy feature (eg: `kubectl get podsecuritypolicy` does not error, and returns one or more objects), be aware that init containers have moved from alpha to beta.  If there are any pods with the key `pods.beta.kubernetes.io/init-containers`, then that pod may not have been filtered by the PodSecurityPolicy. You should find such pods and either delete them or audit them to ensure they do not use features that you intend to be blocked by PodSecurityPolicy. (#31026, @erictune)
+- If you are using the PodSecurityPolicy feature (e.g.: `kubectl get podsecuritypolicy` does not error, and returns one or more objects), be aware that init containers have moved from alpha to beta.  If there are any pods with the key `pods.beta.kubernetes.io/init-containers`, then that pod may not have been filtered by the PodSecurityPolicy. You should find such pods and either delete them or audit them to ensure they do not use features that you intend to be blocked by PodSecurityPolicy. (#31026, @erictune)
 - If upgrading Cluster Federation components from 1.3.x, please ensure your cluster name is a valid DNS label (#30956, @nikhiljindal)
 - kubelet's `--config` flag has been deprecated, use `--pod-manifest-path` instead (#29999, @mtaufen)
 - If upgrading Cluster Federation components from 1.3.x, be aware the federation-controller-manager now looks for a different secret name.  Run the following to migrate (#28938, @madhusudancs)

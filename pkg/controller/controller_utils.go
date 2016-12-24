@@ -72,7 +72,7 @@ func StaticResyncPeriodFunc(resyncPeriod time.Duration) ResyncPeriodFunc {
 	}
 }
 
-// Expectations are a way for controllers to tell the controller manager what they expect. eg:
+// Expectations are a way for controllers to tell the controller manager what they expect. e.g.:
 //	ControllerExpectations: {
 //		controller1: expects  2 adds in 2 minutes
 //		controller2: expects  2 dels in 2 minutes

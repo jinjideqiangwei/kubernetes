@@ -120,7 +120,7 @@
 //   [index]
 //                    Selcts child array element at 'index'.
 //   ..expr
-//                    Recursively selects all children, filtered by an a union,
+//                    Recursively selects all children, filtered by an union,
 //                    index, or slice expression.
 //   ..*
 //                    Recursive selection of all nodes at this point in the

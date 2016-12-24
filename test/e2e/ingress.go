@@ -40,7 +40,7 @@ const (
 	// On average it takes ~6 minutes for a single backend to come online in GCE.
 	lbPollTimeout = 15 * time.Minute
 
-	// General cloud resource poll timeout (eg: create static ip, firewall etc)
+	// General cloud resource poll timeout (e.g.: create static ip, firewall etc)
 	cloudResourcePollTimeout = 5 * time.Minute
 
 	// Time required by the loadbalancer to cleanup, proportional to numApps/Ing.

@@ -72,7 +72,7 @@ function set-federation-zone-vars {
     # After KUBE_AWS_INSTANCE_PREFIX is changed,
     # we need to make sure the config-xxx.sh file is
     # re-sourced so the change propogates to dependent computed values
-    # (eg: MASTER_SG_NAME, NODE_SG_NAME, etc)
+    # (e.g.: MASTER_SG_NAME, NODE_SG_NAME, etc)
     source "${KUBE_ROOT}/cluster/aws/util.sh"
   else
     echo "Provider \"${KUBERNETES_PROVIDER}\" is not supported"

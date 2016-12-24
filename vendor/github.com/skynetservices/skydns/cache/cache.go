@@ -24,7 +24,7 @@ type elem struct {
 	msg        *dns.Msg
 }
 
-// Cache is a cache that holds on the a number of RRs or DNS messages. The cache
+// Cache is a cache that holds on a number of RRs or DNS messages. The cache
 // eviction is randomized.
 type Cache struct {
 	sync.RWMutex
