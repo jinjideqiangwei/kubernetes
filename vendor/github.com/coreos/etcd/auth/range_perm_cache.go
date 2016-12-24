@@ -25,7 +25,7 @@ import (
 // isSubset returns true if a is a subset of b.
 // If a is a prefix of b, then a is a subset of b.
 // Given intervals [a1,a2) and [b1,b2), is
-// the a interval a subset of b?
+// the interval a subset of b?
 func isSubset(a, b *rangePerm) bool {
 	switch {
 	case len(a.end) == 0 && len(b.end) == 0:

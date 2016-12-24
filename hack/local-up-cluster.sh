@@ -29,9 +29,9 @@ PSP_ADMISSION=${PSP_ADMISSION:-""}
 RUNTIME_CONFIG=${RUNTIME_CONFIG:-""}
 KUBELET_AUTHORIZATION_WEBHOOK=${KUBELET_AUTHORIZATION_WEBHOOK:-""}
 KUBELET_AUTHENTICATION_WEBHOOK=${KUBELET_AUTHENTICATION_WEBHOOK:-""}
-# Name of the network plugin, eg: "kubenet"
+# Name of the network plugin, e.g.: "kubenet"
 NET_PLUGIN=${NET_PLUGIN:-""}
-# Place the binaries required by NET_PLUGIN in this directory, eg: "/home/kubernetes/bin".
+# Place the binaries required by NET_PLUGIN in this directory, e.g.: "/home/kubernetes/bin".
 NET_PLUGIN_DIR=${NET_PLUGIN_DIR:-""}
 SERVICE_CLUSTER_IP_RANGE=${SERVICE_CLUSTER_IP_RANGE:-10.0.0.0/24}
 # if enabled, must set CGROUP_ROOT

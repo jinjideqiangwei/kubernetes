@@ -69,7 +69,7 @@ should be unnecessary to relabel the pod's volumes.
 ### Libcontainer SELinux library
 
 Docker and rkt both use the libcontainer SELinux library.  This library
-provides a method, `GetLxcContexts`, that returns the a unique SELinux
+provides a method, `GetLxcContexts`, that returns a unique SELinux
 contexts for container processes and files used by them.  `GetLxcContexts`
 reads the base SELinux context information from a file at `/etc/selinux/<policy-
 name>/contexts/lxc_contexts` and then adds a process-unique MCS label.

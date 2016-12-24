@@ -12,7 +12,7 @@ of volume setup behind the volume plugin `SetUp` method.
 2.  There is a gap between files being mounted/created by volume plugins and when their ownership
     is set correctly; race conditions exist around this
 3.  Solving the correct application of ownership management in an externalized model is difficult
-    and makes it clear that the a transaction boundary is being broken by the externalized design
+    and makes it clear that a transaction boundary is being broken by the externalized design
 
 ### Additional issues with externalization
 

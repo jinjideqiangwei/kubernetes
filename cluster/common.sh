@@ -218,7 +218,7 @@ function get-kubeconfig-basicauth() {
 # the kubeconfig section corresponding to $1.
 #
 # Args:
-#   $1 kubeconfig section to look for basic auth (eg: user or user-basic-auth).
+#   $1 kubeconfig section to look for basic auth (e.g.: user or user-basic-auth).
 # Assumed vars:
 #   KUBE_ROOT
 # Vars set:

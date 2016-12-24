@@ -338,7 +338,7 @@ def gather_sdn_data():
 
 
 def install_kubeconfig(kubeconfig, directory, user):
-    '''Copy the a file from the target to a new directory creating directories
+    '''Copy the file from the target to a new directory creating directories
     if necessary. '''
     # The file and directory must be owned by the correct user.
     chown = 'chown {0}:{0} {1}'

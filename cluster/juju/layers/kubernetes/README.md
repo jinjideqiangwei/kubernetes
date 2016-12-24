@@ -39,7 +39,7 @@ match with the
 of the [kubernetes github project](https://github.com/kubernetes/kubernetes).
 Changing the version causes the all the Kubernetes containers to be restarted.
 
-**cidr**: Set the IP range for the Kubernetes cluster. eg: 10.1.0.0/16
+**cidr**: Set the IP range for the Kubernetes cluster. e.g.: 10.1.0.0/16
 
 **dns_domain**: Set the DNS domain for the Kubernetes cluster.
 

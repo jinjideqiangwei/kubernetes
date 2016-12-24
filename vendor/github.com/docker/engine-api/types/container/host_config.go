@@ -73,7 +73,7 @@ func (n UsernsMode) IsHost() bool {
 	return n == "host"
 }
 
-// IsPrivate indicates whether the container uses the a private userns.
+// IsPrivate indicates whether the container uses a private userns.
 func (n UsernsMode) IsPrivate() bool {
 	return !(n.IsHost())
 }
